@@ -4,8 +4,8 @@
 :root {
     --background-color: hsl(212, 45%, 89%);
     --container-bg-color: hsl(0, 0%, 100%);
-    --paragraph-color: hsl(220, 15%, 55%);
     --header-color: hsl(218, 44%, 22%);
+    --paragraph-color: hsl(220, 15%, 55%);
 }
 
 * {
@@ -28,9 +28,9 @@ body {
 .main .container {
     width: 320px;
     height: 497px;
-    padding: 16px 16px 40px 16px;
+    padding: 16px 16px 40px;
     border-radius: 20px;
-    box-shadow: 0px 16px 16px 0px hsla(0, 0%, 0%, 0.050);
+    box-shadow: 0px 25px 25px 0px hsla(0, 0%, 0%, 0.050);
     background-color: var(--container-bg-color);
 }
 
@@ -40,59 +40,51 @@ body {
 }
 
 .main .container .inner-top img {
-    width: 100%;
+    width: 288px;
+    height: 288px;
     border-radius: 10px;
 }
 
 .main .container .inner-bottom {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 288px;
     height: 129px;
-    margin: 24px 0px 0px 0px;
-    padding: 0px 16px;
+    margin: 24px 0px 0px;
 }
 
 .main .container .inner-bottom h1 {
-    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    width: 288px;
+    text-align: center;
+    font-family: Outfit;
     font-size: 22px;
     font-weight: 700;
-    line-height: 28px;
-    text-align: center;
-    letter-spacing: 0.19px;
-    vertical-align: top;
     color: var(--header-color);
 }
 
 .main .container .inner-bottom p {
-    margin-top: 16px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 19px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    width: 256px;
+    margin: 16px 16px 0px 16px;
     text-align: center;
-    letter-spacing: 0.19px;
-    vertical-align: top;
+    font-family: Outfit;
+    font-size: 15px;
+    letter-spacing: 0.188px;
     color: var(--paragraph-color);
 }
 
-@media only screen and (max-width: 1024px) {
-    .main .container {
-        max-width: 320px;
-        max-height: 497px;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-    .main .container {
-        max-width: 320px;
-        max-height: 497px;
-    }
-}
-
-@media only screen and (max-width: 340px) {
+@media screen and (max-width: 350px) {
     .main .container {
         width: 90vw;
         height: auto;
-        padding: 16px 16px 20px 16px;
     }
     
     .main .container .inner-top,
@@ -101,12 +93,18 @@ body {
         height: auto;
     }
 
+    .main .container .inner-top img {
+        width: 100%;
+        height: auto;
+    }
+
     .main .container .inner-bottom h1 {
+        width: auto;
         font-size: 18px;
     }
     
     .main .container .inner-bottom p {
-        margin-top: 12px;
+        width: auto;
         font-size: 14px;
     }
 }
