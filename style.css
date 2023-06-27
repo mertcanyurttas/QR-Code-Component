@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* font-family: 'Outfit', sans-serif; */
+
+:root {
+    --background-color: hsl(212, 45%, 89%);
+    --container-bg-color: hsl(0, 0%, 100%);
+    --paragraph-color: hsl(220, 15%, 55%);
+    --header-color: hsl(218, 44%, 22%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}   
+
+.main .container {
+    width: 320px;
+    height: 497px;
+    padding: 16px 16px 40px 16px;
+    border-radius: 20px;
+    box-shadow: 0px 16px 16px 0px hsla(0, 0%, 0%, 0.050);
+    background-color: var(--container-bg-color);
+}
+
+.main .container .inner-top {
+    width: 288px;
+    height: 288px;
+}
+
+.main .container .inner-top img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.main .container .inner-bottom {
+    width: 288px;
+    height: 129px;
+    margin: 24px 0px 0px 0px;
+    padding: 0px 16px;
+}
+
+.main .container .inner-bottom h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.19px;
+    vertical-align: top;
+    color: var(--header-color);
+}
+
+.main .container .inner-bottom p {
+    margin-top: 16px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.19px;
+    vertical-align: top;
+    color: var(--paragraph-color);
+}
+
+@media only screen and (max-width: 1024px) {
+    .main .container {
+        max-width: 320px;
+        max-height: 497px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .main .container {
+        max-width: 320px;
+        max-height: 497px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .main .container {
+        width: 90vw;
+        height: auto;
+        padding: 16px 16px 20px 16px;
+    }
+    
+    .main .container .inner-top,
+    .main .container .inner-bottom {
+        width: auto;
+        height: auto;
+    }
+
+    .main .container .inner-bottom h1 {
+        font-size: 18px;
+    }
+    
+    .main .container .inner-bottom p {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+}
